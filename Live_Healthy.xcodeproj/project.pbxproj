@@ -24,6 +24,10 @@
 		488412C71714FA5C0007B755 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4884129F1714FA5C0007B755 /* Foundation.framework */; };
 		488412CF1714FA5C0007B755 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 488412CD1714FA5C0007B755 /* InfoPlist.strings */; };
 		488412D21714FA5C0007B755 /* Live_HealthyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 488412D11714FA5C0007B755 /* Live_HealthyTests.m */; };
+		488412E11719AE990007B755 /* HLPlansViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488412E01719AE990007B755 /* HLPlansViewController.m */; };
+		488412E21719AE990007B755 /* HLPlansViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488412E01719AE990007B755 /* HLPlansViewController.m */; };
+		488412E9171A3BCE0007B755 /* HLPlans.m in Sources */ = {isa = PBXBuildFile; fileRef = 488412E8171A3BCE0007B755 /* HLPlans.m */; };
+		488412EA171A3BCE0007B755 /* HLPlans.m in Sources */ = {isa = PBXBuildFile; fileRef = 488412E8171A3BCE0007B755 /* HLPlans.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,10 @@
 		488412CE1714FA5C0007B755 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		488412D01714FA5C0007B755 /* Live_HealthyTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Live_HealthyTests.h; sourceTree = "<group>"; };
 		488412D11714FA5C0007B755 /* Live_HealthyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Live_HealthyTests.m; sourceTree = "<group>"; };
+		488412DF1719AE990007B755 /* HLPlansViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLPlansViewController.h; sourceTree = "<group>"; };
+		488412E01719AE990007B755 /* HLPlansViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLPlansViewController.m; sourceTree = "<group>"; };
+		488412E7171A3BCE0007B755 /* HLPlans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLPlans.h; sourceTree = "<group>"; };
+		488412E8171A3BCE0007B755 /* HLPlans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLPlans.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +134,10 @@
 				488412BB1714FA5C0007B755 /* HLViewController.h */,
 				488412BC1714FA5C0007B755 /* HLViewController.m */,
 				488412A41714FA5C0007B755 /* Supporting Files */,
+				488412DF1719AE990007B755 /* HLPlansViewController.h */,
+				488412E01719AE990007B755 /* HLPlansViewController.m */,
+				488412E7171A3BCE0007B755 /* HLPlans.h */,
+				488412E8171A3BCE0007B755 /* HLPlans.m */,
 			);
 			path = Live_Healthy;
 			sourceTree = "<group>";
@@ -278,6 +290,8 @@
 				488412AA1714FA5C0007B755 /* main.m in Sources */,
 				488412AE1714FA5C0007B755 /* HLAppDelegate.m in Sources */,
 				488412BD1714FA5C0007B755 /* HLViewController.m in Sources */,
+				488412E11719AE990007B755 /* HLPlansViewController.m in Sources */,
+				488412E9171A3BCE0007B755 /* HLPlans.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +300,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				488412D21714FA5C0007B755 /* Live_HealthyTests.m in Sources */,
+				488412E21719AE990007B755 /* HLPlansViewController.m in Sources */,
+				488412EA171A3BCE0007B755 /* HLPlans.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
