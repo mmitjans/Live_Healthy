@@ -8,28 +8,11 @@
 
 #import "HLAppDelegate.h"
 
-#import "HLPlansViewController.h"
-#import "HLPlans.h"
-
-@implementation HLAppDelegate {
-    NSMutableArray *plans;
-}
+@implementation HLAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    plans = [NSMutableArray arrayWithCapacity:20];
-    
-    HLPlans* plan = [[HLPlans alloc] init];
-    
-    [plans addObject:plan];
-    
-    UITabBarController *tabBarController = (UITabBarController *) self.window.rootViewController;
-    UINavigationController *navigationController = [[tabBarController viewControllers] objectAtIndex:0];
-    
-    HLPlansViewController *plansViewController =[[navigationController viewControllers] objectAtIndex:0b];
-    
-    plansViewController.plans = plans;
     return YES;
 }
 							
