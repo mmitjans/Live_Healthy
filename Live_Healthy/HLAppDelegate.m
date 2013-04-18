@@ -7,12 +7,21 @@
 //
 
 #import "HLAppDelegate.h"
+#import "HLPlansViewController.h"
 
 @implementation HLAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    UITabBarController *tabBarController = (UITabBarController *)
+    self.window.rootViewController;
+    UINavigationController *navigationController =
+    [[tabBarController viewControllers] objectAtIndex:1];
+    HLPlansViewController *plansViewController =
+    [[navigationController viewControllers] objectAtIndex:0];
+    
     return YES;
 }
 							
