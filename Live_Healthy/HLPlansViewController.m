@@ -7,6 +7,7 @@
 //
 
 #import "HLPlansViewController.h"
+#import "HLPlan.h"
 
 @interface HLPlansViewController ()
 
@@ -44,25 +45,22 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.plans count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    UITableViewCell *cell = [tableView
+                             dequeueReusableCellWithIdentifier:@"PlanCell"];
+    HLPlan *plan = [self.plans objectAtIndex:indexPath.row];
+	cell.textLabel.text = plan.planName;
     return cell;
 }
 

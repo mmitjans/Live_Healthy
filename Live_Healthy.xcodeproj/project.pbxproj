@@ -25,6 +25,7 @@
 		488412D21714FA5C0007B755 /* Live_HealthyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 488412D11714FA5C0007B755 /* Live_HealthyTests.m */; };
 		488412EC171F8DA70007B755 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 488412EB171F8DA70007B755 /* Storyboard.storyboard */; };
 		488412EF171F92100007B755 /* HLPlansViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488412EE171F92100007B755 /* HLPlansViewController.m */; };
+		48D41C401720C639006C2182 /* HLPlan.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D41C3F1720C638006C2182 /* HLPlan.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +48,7 @@
 		488412A91714FA5C0007B755 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		488412AB1714FA5C0007B755 /* Live_Healthy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Live_Healthy-Prefix.pch"; sourceTree = "<group>"; };
 		488412AC1714FA5C0007B755 /* HLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLAppDelegate.h; sourceTree = "<group>"; };
-		488412AD1714FA5C0007B755 /* HLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLAppDelegate.m; sourceTree = "<group>"; };
+		488412AD1714FA5C0007B755 /* HLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		488412AF1714FA5C0007B755 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		488412B11714FA5C0007B755 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		488412B31714FA5C0007B755 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -63,6 +64,8 @@
 		488412EB171F8DA70007B755 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		488412ED171F92100007B755 /* HLPlansViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLPlansViewController.h; sourceTree = "<group>"; };
 		488412EE171F92100007B755 /* HLPlansViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLPlansViewController.m; sourceTree = "<group>"; };
+		48D41C3E1720C638006C2182 /* HLPlan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLPlan.h; sourceTree = "<group>"; };
+		48D41C3F1720C638006C2182 /* HLPlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLPlan.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,8 @@
 				488412A41714FA5C0007B755 /* Supporting Files */,
 				488412ED171F92100007B755 /* HLPlansViewController.h */,
 				488412EE171F92100007B755 /* HLPlansViewController.m */,
+				48D41C3E1720C638006C2182 /* HLPlan.h */,
+				48D41C3F1720C638006C2182 /* HLPlan.m */,
 			);
 			path = Live_Healthy;
 			sourceTree = "<group>";
@@ -284,6 +289,7 @@
 				488412AE1714FA5C0007B755 /* HLAppDelegate.m in Sources */,
 				488412BD1714FA5C0007B755 /* HLViewController.m in Sources */,
 				488412EF171F92100007B755 /* HLPlansViewController.m in Sources */,
+				48D41C401720C639006C2182 /* HLPlan.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

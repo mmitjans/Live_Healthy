@@ -8,8 +8,11 @@
 
 #import "HLAppDelegate.h"
 #import "HLPlansViewController.h"
+#import "HLPlan.h"
 
-@implementation HLAppDelegate
+@implementation HLAppDelegate {
+    NSMutableArray* plans;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -19,8 +22,19 @@
     self.window.rootViewController;
     UINavigationController *navigationController =
     [[tabBarController viewControllers] objectAtIndex:1];
+    
+    HLPlan* plan = [[HLPlan alloc] init];
+    
+    plan.planName = @"Test";
+    
+    plans = [NSMutableArray arrayWithCapacity:10];
+    
+    [plans addObject:plan];
+
     HLPlansViewController *plansViewController =
     [[navigationController viewControllers] objectAtIndex:0];
+    
+    plansViewController.plans = plans;
     
     return YES;
 }
