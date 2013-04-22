@@ -31,19 +31,24 @@
     self.serverConnector = [[HLServerConnector alloc] initWithHostName:@"127.0.0.1:8000"];
     [self.serverConnector useCache];
     
-    self.currencyOperation = [self.serverConnector callServer:@"" completionHandler:^(NSString *msgReceived) {
+    self.currencyOperation = [self.serverConnector callServer:@"" completionHandler:^(NSDictionary *msgReceived) {
+        
+        NSString *text = [msgReceived objectForKey:@"name"];
         
         [[[UIAlertView alloc] initWithTitle:@"Today's Singapore Dollar Rates"
-                                    message:msgReceived
+                                    message:text
                                    delegate:nil
                           cancelButtonTitle:NSLocalizedString(@"Dismiss", @"")
                           otherButtonTitles:nil] show];
+
         } errorHandler:^(NSError* error) {
             DLog(@"%@\t%@\t%@\t%@", [error localizedDescription],
                  [error localizedFailureReason],
                  [error localizedRecoveryOptions],
                  [error localizedRecoverySuggestion]);
-        }];
+        }
+        
+                              ];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

@@ -18,10 +18,8 @@
 {
     // Override point for customization after application launch.
     
-    UITabBarController *tabBarController = (UITabBarController *)
-    self.window.rootViewController;
-    UINavigationController *navigationController =
-    [[tabBarController viewControllers] objectAtIndex:1];
+    UITabBarController *tabBarController = (UITabBarController *) self.window.rootViewController;
+    UINavigationController *navigationController = [[tabBarController viewControllers] objectAtIndex:1];
     
     HLPlan* plan = [[HLPlan alloc] init];
     
@@ -31,8 +29,7 @@
     
     [plans addObject:plan];
 
-    HLPlansViewController *plansViewController =
-    [[navigationController viewControllers] objectAtIndex:0];
+    HLPlansViewController *plansViewController = [[navigationController viewControllers] objectAtIndex:0];
     
     plansViewController.plans = plans;
     

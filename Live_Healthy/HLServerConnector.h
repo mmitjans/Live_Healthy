@@ -12,12 +12,8 @@
 
 @interface HLServerConnector : MKNetworkEngine
 
-typedef void (^CurrencyResponseBlock)(NSString* rate);
-
-//-(MKNetworkOperation*) currencyRateFor:(NSString*) sourceCurrency
-//                            inCurrency:(NSString*) targetCurrency
-//                     completionHandler:(CurrencyResponseBlock) completion
-//                          errorHandler:(MKNKErrorBlock) error;
+// Response block
+typedef void (^CurrencyResponseBlock)(NSDictionary *jsonData);
 
 -(MKNetworkOperation*) callServer:(NSString*) site
                      completionHandler:(CurrencyResponseBlock) completionBlock
