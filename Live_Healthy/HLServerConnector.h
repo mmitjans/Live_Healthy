@@ -8,15 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-#import "MKNetworkEngine.h"
-
-@interface HLServerConnector : MKNetworkEngine
+@interface HLServerConnector : NSObject
 
 // Response block
 typedef void (^CurrencyResponseBlock)(NSDictionary *jsonData);
 
--(MKNetworkOperation*) callServer:(NSString*) site
-                     completionHandler:(CurrencyResponseBlock) completionBlock
-                          errorHandler:(MKNKErrorBlock) error;
+-(void) callServer:(NSString*) site completionHandler:(CurrencyResponseBlock) completionBlock;
 
 @end

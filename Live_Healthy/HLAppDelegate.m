@@ -10,12 +10,24 @@
 #import "HLPlansViewController.h"
 #import "HLPlan.h"
 
+#import <Parse/Parse.h>
+
 @implementation HLAppDelegate {
     NSMutableArray* plans;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [Parse setApplicationId:@"Ps3Z5KuhwrExyxK5P2JxwIVa0gf42obU1UnUv6rN"
+                  clientKey:@"d0oDmDkFt8x5LqhtAlHUS8zNzNk1yE7T2IRrg3LA"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    [testObject setObject:@"bar" forKey:@"foo"];
+    [testObject save];
+    
     // Override point for customization after application launch.
     
     UITabBarController *tabBarController = (UITabBarController *) self.window.rootViewController;
@@ -33,6 +45,16 @@
     
     plansViewController.plans = plans;
     
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    if (!url) {  return NO; }
+    
+    NSString *URLString = [url absoluteString];
+    [[NSUserDefaults standardUserDefaults] setObject:URLString forKey:@"url"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     return YES;
 }
 							

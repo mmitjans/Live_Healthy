@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "HLServerConnector.h"
+#import "HLMapMyRideConnector.h"
 
 @interface HLPlansViewController : UITableViewController
 
 @property(nonatomic, strong) NSMutableArray *plans;
-@property (strong, nonatomic) HLServerConnector *serverConnector;
-@property (strong, nonatomic) MKNetworkOperation *currencyOperation;
+@property(strong, nonatomic) HLServerConnector *serverConnector;
+@property(strong, nonatomic) HLMapMyRideConnector *myMyRideConnector;
 @end

@@ -7,13 +7,65 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "Live_Healthy/HLPlansViewController.m"
-         timestampString = "388288164.240705"
+         filePath = "Live_Healthy/HLMapMyRideConnector.m"
+         timestampString = "388812855.511631"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "36"
-         endingLineNumber = "36"
-         landmarkName = "-viewDidLoad"
+         startingLineNumber = "24"
+         endingLineNumber = "24"
+         landmarkName = "-connectWithMapMyRide:::"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Live_Healthy/HLMapMyRideConnector.m"
+         timestampString = "388813404.427013"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "16"
+         endingLineNumber = "16"
+         landmarkName = "-connectWithMapMyRide:::"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Live_Healthy/Vendors/AFOAuth1Client/AFOAuth1Client.m"
+         timestampString = "388813684.135862"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "310"
+         endingLineNumber = "310"
+         landmarkName = "-acquireOAuthRequestTokenWithPath:callback:accessMethod:success:failure:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Live_Healthy/Vendors/AFOAuth1Client/AFOAuth1Client.m"
+         timestampString = "388813717.839536"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "298"
+         endingLineNumber = "298"
+         landmarkName = "-acquireOAuthRequestTokenWithPath:callback:accessMethod:success:failure:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Live_Healthy/HLAppDelegate.m"
+         timestampString = "390357536.854022"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "53"
+         endingLineNumber = "53"
+         landmarkName = "-application:handleOpenURL:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

@@ -28,27 +28,22 @@
 {
     [super viewDidLoad];
     
-    self.serverConnector = [[HLServerConnector alloc] initWithHostName:@"127.0.0.1:8000"];
-    [self.serverConnector useCache];
+    self.serverConnector = [[HLServerConnector alloc] init];
+    self.myMyRideConnector = [[HLMapMyRideConnector alloc] init];
+    [self.myMyRideConnector connectWithMapMyRide:@"http://127.0.0.1:8000/" :@"4oFCF0AjP4PQDUaCh5RQ" :@"NxAihESVsdUXSUxtHrml2VBHA0xKofYKmmGS01KaSs"];
     
-    self.currencyOperation = [self.serverConnector callServer:@"" completionHandler:^(NSDictionary *msgReceived) {
-        
-        NSString *text = [msgReceived objectForKey:@"name"];
-        
-        [[[UIAlertView alloc] initWithTitle:@"Today's Singapore Dollar Rates"
-                                    message:text
-                                   delegate:nil
-                          cancelButtonTitle:NSLocalizedString(@"Dismiss", @"")
-                          otherButtonTitles:nil] show];
-
-        } errorHandler:^(NSError* error) {
-            DLog(@"%@\t%@\t%@\t%@", [error localizedDescription],
-                 [error localizedFailureReason],
-                 [error localizedRecoveryOptions],
-                 [error localizedRecoverySuggestion]);
-        }
-        
-                              ];
+    
+//    [self.serverConnector callServer:@"http://127.0.0.1:8000/" completionHandler:^(NSDictionary *msgReceived) {
+//        
+//        NSString *text = [msgReceived objectForKey:@"name"];
+//        
+//        [[[UIAlertView alloc] initWithTitle:@"Today's Singapore Dollar Rates"
+//                                    message:text
+//                                   delegate:nil
+//                          cancelButtonTitle:NSLocalizedString(@"Dismiss", @"")
+//                          otherButtonTitles:nil] show];
+//        
+//    } ];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

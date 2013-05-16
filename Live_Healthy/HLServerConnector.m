@@ -8,44 +8,33 @@
 
 #import "HLServerConnector.h"
 
+#import "AFJSONRequestOperation.h"
+
 @implementation HLServerConnector
 
--(MKNetworkOperation*) callServer:(NSString*) site
-                completionHandler:(CurrencyResponseBlock) completionBlock
-                     errorHandler:(MKNKErrorBlock) errorBlock
+-(void) callServer:(NSString *)site completionHandler:(CurrencyResponseBlock)completionBlock
 {
-    MKNetworkOperation *op = [self operationWithPath:site
-                                              params:nil
-                                          httpMethod:@"GET"];
+    NSURL *url = [NSURL URLWithString:site];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setHTTPMethod:@"GET"];
     
-    [op addCompletionHandler:^(MKNetworkOperation *completedOperation)
-     {
-         // the completionBlock will be called twice.
-         // if you are interested only in new values, move that code within the else block
-         NSDictionary *data = [completedOperation responseJSON];
-         
-         
-//         NSString *valueString = [completedOperation responseString];
-//         DLog(@"%@", valueString);
-//          
-//         if([completedOperation isCachedResponse]) {
-//             DLog(@"Data from cache %@", [completedOperation responseString]);
-//         }
-//         else {
-//             DLog(@"Data from server %@", [completedOperation responseString]);
-//         }
-         
-         completionBlock(data);
-         
-     } errorHandler:^(MKNetworkOperation *errorOp, NSError* error) {
-         errorBlock(error);
-     }];
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        
+        NSLog(@"JSON Received: %@", JSON);
+        
+        NSDictionary *data = JSON;
+        
+        completionBlock(data);
+        
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Weather"
+                                                     message:[NSString stringWithFormat:@"%@",error]
+                                                    delegate:nil
+                                           cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [av show];
+    }];
     
-    [self enqueueOperation:op];
-    
-    return op;
-
-    
+    [operation start];
 }
 
 @end
